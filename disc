@@ -1,3 +1,4 @@
+--sasd
 local DiscordLib = {}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -218,8 +219,10 @@ function DiscordLib:Window(text)
 	UserImage.Parent = UserIcon
 	UserImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	UserImage.BackgroundTransparency = 1.000
-	UserImage.Size = UDim2.new(0, 32, 0, 32)
+	UserImage.Size = UDim2.new(1, 0, 1, 0)  -- Cambia el tamaño para que ocupe todo el espacio
 	UserImage.Image = pfp 
+	UserImage.ImageRectSize = Vector2.new(420, 420)  -- Ajusta esto según el tamaño de la imagen que estás usando
+	UserImage.ImageTransparency = 0  -- Asegúrate de que la transparencia sea 0 para que sea visible
 	
 	UserCircleImage.Name = "UserImage"
 	UserCircleImage.Parent = UserImage
